@@ -1,0 +1,19 @@
+# Python 임시 파일
+__pycache__/
+*.pyc
+
+# 가상환경
+.venv/
+venv/
+
+# VS Code 개인 설정
+.vscode/
+
+# 테스트 백업 파일
+*.backup
+*.broken
+*.tmp
+
+# 운영체제 임시 파일
+.DS_Store
+Thumbs.db
