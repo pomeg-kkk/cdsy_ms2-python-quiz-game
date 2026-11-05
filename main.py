@@ -54,7 +54,7 @@ def main():
                 game.show_quiz_list()
 
             elif choice == 4:
-                print("🏆 점수 확인 기능은 준비 중입니다.")
+                game.show_best_score()
 
             elif choice == 5:
                 print("👋 게임을 종료합니다.")

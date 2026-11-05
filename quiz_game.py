@@ -5,9 +5,10 @@ from quiz_data import create_default_quizzes
 
 class QuizGame:
     def __init__(self):
-        # 기본 퀴즈 5문제 불러오기
         self.quizzes = create_default_quizzes()
         self.best_score = None
+        self.best_correct = 0
+        self.best_total = 0
 
     # 퀴즈 풀기
     def play_quiz(self):
@@ -55,8 +56,11 @@ class QuizGame:
         print(f"📊 점수: {percentage}점")
         print("=" * 40)
 
+        # 최고 점수 갱신
         if self.best_score is None or percentage > self.best_score:
             self.best_score = percentage
+            self.best_correct = score
+            self.best_total = total
             print("🎉 새로운 최고 점수입니다!")
 
     # 퀴즈 추가
@@ -116,10 +120,26 @@ class QuizGame:
             return
 
         print(f"총 {len(self.quizzes)}개의 퀴즈가 있습니다.")
-
         print("-" * 40)
 
         for index, quiz in enumerate(self.quizzes, start=1):
             print(f"[{index}] {quiz.question}")
+
+        print("-" * 40)
+
+    # 최고 점수 확인
+    def show_best_score(self):
+        print("\n🏆 최고 점수 확인")
+        print("-" * 40)
+
+        if self.best_score is None:
+            print("아직 퀴즈를 플레이한 기록이 없습니다.")
+        else:
+            print(f"최고 점수: {self.best_score}점")
+            print(
+                f"정답 기록: "
+                f"{self.best_total}문제 중 "
+                f"{self.best_correct}문제 정답"
+            )
 
         print("-" * 40)
