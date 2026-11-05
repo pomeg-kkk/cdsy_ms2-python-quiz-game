@@ -35,11 +35,12 @@ def get_menu_choice():
 
 
 def main():
-    game = QuizGame()
-
-    print("🎮 퀴즈 게임에 오신 것을 환영합니다!")
+    game = None
 
     try:
+        game = QuizGame()
+        print("🎮 퀴즈 게임에 오신 것을 환영합니다!")
+
         while True:
             show_menu()
             choice = get_menu_choice()
@@ -62,6 +63,10 @@ def main():
 
     except (KeyboardInterrupt, EOFError):
         print("\n⚠️ 입력이 중단되어 안전하게 종료합니다.")
+
+    finally:
+        if game is not None:
+            game.save_data()
 
 
 if __name__ == "__main__":
