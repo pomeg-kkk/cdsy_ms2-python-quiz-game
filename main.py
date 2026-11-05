@@ -1,4 +1,7 @@
 
+from quiz_game import QuizGame
+
+
 def show_menu():
     print("\n" + "=" * 40)
     print("       🎯 Python 퀴즈 게임 🎯")
@@ -32,6 +35,8 @@ def get_menu_choice():
 
 
 def main():
+    game = QuizGame()
+
     print("🎮 퀴즈 게임에 오신 것을 환영합니다!")
 
     try:
@@ -40,7 +45,7 @@ def main():
             choice = get_menu_choice()
 
             if choice == 1:
-                print("📝 퀴즈 풀기 기능은 준비 중입니다.")
+                game.play_quiz()
             elif choice == 2:
                 print("📌 퀴즈 추가 기능은 준비 중입니다.")
             elif choice == 3:
