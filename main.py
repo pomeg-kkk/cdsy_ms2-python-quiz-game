@@ -46,12 +46,16 @@ def main():
 
             if choice == 1:
                 game.play_quiz()
+
             elif choice == 2:
                 game.add_quiz()
+
             elif choice == 3:
-                print("📋 퀴즈 목록 기능은 준비 중입니다.")
+                game.show_quiz_list()
+
             elif choice == 4:
                 print("🏆 점수 확인 기능은 준비 중입니다.")
+
             elif choice == 5:
                 print("👋 게임을 종료합니다.")
                 break
