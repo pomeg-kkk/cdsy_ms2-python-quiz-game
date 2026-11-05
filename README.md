@@ -152,3 +152,6 @@ python-quiz-game/
 
 프로그램 실행 화면은 docs/screenshots 폴더에 추가할 예정입니다.
 ```
+
+## Git Clone 및 Pull 실습
+GitHub 저장소를 복제하고 변경사항을 동기화하는 실습을 완료했습니다.
