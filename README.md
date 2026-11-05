@@ -178,3 +178,26 @@ GitHub 저장소를 복제하고 변경사항을 동기화하는 실습을 완�
 
 ### 개발 환경
 ![개발 환경](docs/screenshots/environment.png)
+
+## 12. 프로젝트 실행 화면
+
+### 메인 메뉴
+![메인 메뉴](docs/screenshots/menu.png)
+
+### 퀴즈 추가
+![퀴즈 추가](docs/screenshots/add_quiz.png)
+
+### 퀴즈 목록
+![퀴즈 목록](docs/screenshots/list.png)
+
+### 퀴즈 풀이
+![퀴즈 풀이](docs/screenshots/play.png)
+
+### 최고 점수
+![최고 점수](docs/screenshots/score.png)
+
+### Git 커밋 및 브랜치 병합
+![Git 커밋 기록](docs/screenshots/git_log.png)
+
+### 개발 환경
+![개발 환경](docs/screenshots/environment.png)
