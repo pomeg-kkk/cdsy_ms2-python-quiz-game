@@ -1,4 +1,4 @@
-
+from quiz import Quiz
 from quiz_data import create_default_quizzes
 
 
@@ -64,3 +64,48 @@ class QuizGame:
         if self.best_score is None or percentage > self.best_score:
             self.best_score = percentage
             print("🎉 새로운 최고 점수입니다!")
+    
+    def add_quiz(self):
+        print("\n📌 새로운 퀴즈를 추가합니다.")
+
+        while True:
+            question = input("문제를 입력하세요: ").strip()
+            if question:
+                break
+            print("⚠️ 문제를 비워둘 수 없습니다.")
+
+        choices = []
+
+        for i in range(1, 5):
+            while True:
+                choice = input(f"선택지 {i}: ").strip()
+
+                if choice:
+                    choices.append(choice)
+                    break
+
+                print("⚠️ 선택지를 비워둘 수 없습니다.")
+
+        while True:
+            user_input = input("정답 번호 (1-4): ").strip()
+
+            if not user_input:
+                print("⚠️ 정답 번호를 입력해주세요.")
+                continue
+
+            try:
+                answer = int(user_input)
+            except ValueError:
+                print("⚠️ 숫자를 입력해주세요.")
+                continue
+
+            if 1 <= answer <= 4:
+                break
+
+            print("⚠️ 1~4 사이의 번호를 입력해주세요.")
+
+        new_quiz = Quiz(question, choices, answer)
+        self.quizzes.append(new_quiz)
+
+        print("✅ 새로운 퀴즈가 추가되었습니다!")
+        print(f"📚 현재 등록된 퀴즈: {len(self.quizzes)}개")
